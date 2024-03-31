@@ -65,6 +65,22 @@ h1 .strong {
   background: #222;
 }
 
+.score {
+  margin: 24px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.score h1 {
+  margin: 0;
+  line-height: normal;
+}
+.score img {
+  width: 54px;
+  margin-left: 8px;
+}
+
 .buttons button {
   padding: 4px 16px;
   margin: 5px;

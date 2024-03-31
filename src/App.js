@@ -31,6 +31,18 @@ function App() {
     transform: `translateY(${-y}px)`,
   };
 
+  const setImageByPercent = (count) => {
+    if (count === 100) {
+      return <img src='/images/p_3.png' alt='포인트 100' />;
+    } else if (count >= 67 && count <= 99) {
+      return <img src='/images/p_2.png' alt='포인트 67˜99' />;
+    } else if (count >= 34 && count <= 66) {
+      return <img src='/images/p_1.png' alt='포인트 34˜66' />;
+    } else {
+      return <img src='/images/p_0.png' alt='포인트 0˜33' />;
+    }
+  };
+
   return (
     <div className='container'>
       <div className='content'>
@@ -43,7 +55,11 @@ function App() {
             <div className='energy' style={styles}></div>
           </div>
         </section>
-        <h1>{count}%</h1>
+        <div className='score'>
+          <h1>{count}%</h1>
+          <span> {setImageByPercent(count)}</span>
+        </div>
+
         <div className='buttons positiv'>
           <button onClick={increase20}>
             난 널 믿어
