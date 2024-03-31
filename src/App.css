@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: "UhBeeKang-Ja";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeKang-Ja.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "UhBeeKang-Ja";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  background-color: #eed0b9;
 }
 
-.App-link {
-  color: #61dafb;
+.content {
+  padding: 0px 24px 42px;
+  width: 550px;
+  background: #f1f1f1;
+  border-radius: 2.5em;
+  box-shadow: 10px 10px 32px 3px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "UhBeeKang-Ja";
+}
+
+h1 .strong {
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+.battery_wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.battery {
+  position: relative;
+  width: 150px;
+  height: 300px;
+  overflow: hidden;
+  border: 5px solid #222;
+  border-radius: 16px;
+  background: linear-gradient(
+    0deg,
+    rgba(218, 92, 68, 1) 0%,
+    rgba(240, 193, 32, 1) 50%,
+    rgba(38, 226, 77, 1) 100%
+  );
+}
+
+.energy {
+  position: absolute;
+  width: 150px;
+  height: 300px;
+  background: #222;
+}
+
+.buttons button {
+  padding: 4px 16px;
+  margin: 5px;
+  border-radius: 3rem;
+  font-family: "UhBeeKang-Ja";
+  border: 2px solid #222;
+  font-size: 1.12rem;
+}
+
+.buttons button span {
+  display: block;
+}
+
+.buttons.positiv button {
+  background: rgb(216, 237, 232);
+}
+
+.buttons.negativ button {
+  border: 2px solid rgb(222, 110, 110);
+  background: rgb(238, 218, 218);
+}
+
+.buttons button img {
+  width: 28px;
+  margin-left: 5px;
+  vertical-align: text-top;
 }
